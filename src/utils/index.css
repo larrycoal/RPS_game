@@ -1,0 +1,10 @@
+.pieceWrapper {
+  background-color: white;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 6px 6px 1px #948484;
+}

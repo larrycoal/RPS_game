@@ -24,7 +24,7 @@ const index = ({ handleSetGameMode }) => {
             <PaperLogo fillcolor="#4dbcd1" />
             <ScissorsLogo fillcolor="#8f5ce7" />
           </div>
-          <button onClick={()=>handleSetGameMode("RPS")}>Let's Go</button>
+          <button onClick={() => handleSetGameMode("RPS")}>Let's Go</button>
         </div>
 
         <div className="seprator">
@@ -47,10 +47,10 @@ const index = ({ handleSetGameMode }) => {
             <RockLogo fillcolor="#eda621" height="48" width="48" />
             <PaperLogo fillcolor="#4dbcd1" />
             <ScissorsLogo fillcolor="#8f5ce7" />
-            <SpockLogo fillcolor="#4dbcd1" />
-            <LizardLogo fillcolor="#eda621" width="65" />
+            <LizardLogo fillcolor="#4dbcd1" width="65" />
+            <SpockLogo  fillcolor="#eda621" />
           </div>
-          <button onClick={()=>handleSetGameMode("RPSLS")}>Let's Go</button>
+          <button onClick={() => handleSetGameMode("RPSLS")}>Let's Go</button>
         </div>
       </div>
     </>

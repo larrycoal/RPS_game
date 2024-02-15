@@ -30,11 +30,34 @@
   padding: 1rem;
   border-radius: 10px;
 }
-.RPSPage .banner div p:nth-child(2){
-    font-size: 2.5rem;
-    margin: 10px 0;
+.RPSPage .banner div p:nth-child(2) {
+  font-size: 2.5rem;
+  margin: 10px 0;
 }
-.RPSPage .banner div p:nth-child(1){
-    font-size: 1.2rem;
-    margin: 5px 0;
+.RPSPage .banner div p:nth-child(1) {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+.game_board {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("../../assets/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.game_board div:nth-child(1) {
+  position: absolute;
+  top: 20px;
+}
+.game_board div:nth-child(2) {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+.game_board div:nth-child(3) {
+  position: absolute;
+  bottom: 20px;
+  right: 32%;
 }
