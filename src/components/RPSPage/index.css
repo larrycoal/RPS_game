@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 60%;
+  height: 100%;
   margin: 0 auto;
 }
 .RPSPage .banner {
@@ -60,4 +61,17 @@
   position: absolute;
   bottom: 20px;
   right: 32%;
+}
+.rules_btn{
+position: absolute;
+bottom: 2rem;
+right: 2rem;
+width: 120px;
+padding: 12px;
+background-color: transparent;
+border: 2px solid  hsl(217, 16%, 45%);
+color: white;
+border-radius: 10px;
+font-size: 1.2rem;
+cursor: pointer;
 }

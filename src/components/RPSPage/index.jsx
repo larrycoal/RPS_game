@@ -22,6 +22,7 @@ const index = () => {
         <Piece Logo={ScissorsLogo} color="#4dbcd1" />
         <Piece Logo={PaperLogo} color="#8f5ce7" />
       </div>
+      <button className="rules_btn">RULES</button>
     </div>
   );
 };
