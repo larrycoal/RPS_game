@@ -1,6 +1,7 @@
 .RPSPage {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 60%;
   height: 100%;
   margin: 0 auto;
@@ -15,6 +16,7 @@
   border-radius: 20px;
   padding: 2rem;
   margin: 3rem 0;
+  width: 800px;
 }
 .RPSPage .banner h1 {
   flex: 1;
@@ -62,16 +64,16 @@
   bottom: 20px;
   right: 32%;
 }
-.rules_btn{
-position: absolute;
-bottom: 2rem;
-right: 2rem;
-width: 120px;
-padding: 12px;
-background-color: transparent;
-border: 2px solid  hsl(217, 16%, 45%);
-color: white;
-border-radius: 10px;
-font-size: 1.2rem;
-cursor: pointer;
+.rules_btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 120px;
+  padding: 12px;
+  background-color: transparent;
+  border: 2px solid hsl(217, 16%, 45%);
+  color: white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
