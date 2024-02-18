@@ -77,3 +77,18 @@
   font-size: 1.2rem;
   cursor: pointer;
 }
+.result_board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 60%;
+}
+.result_board div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+  color: white;
+align-items: center;
+}

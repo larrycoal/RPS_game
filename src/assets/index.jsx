@@ -13,7 +13,7 @@ export const RockLogo = ({
 
 export const PaperLogo = ({
   fillcolor = "#3B4262",
-  height = "48",
+  height = "58",
   width = "48",
 }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height}>
@@ -25,7 +25,7 @@ export const PaperLogo = ({
 );
 export const ScissorsLogo = ({
   fillcolor = "#3B4262",
-  height = "48",
+  height = "58",
   width = "58",
 }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height}>
