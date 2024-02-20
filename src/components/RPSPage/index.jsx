@@ -11,9 +11,27 @@ const index = () => {
     computer: null,
     result: null,
   });
+  const opts = [
+    { pick: "Rock", logo: RockLogo, color: "#eda621" },
+    { pick: "Paper", logo: PaperLogo, color: "#8f5ce7" },
+    { pick: "Scissors", logo: ScissorsLogo, color: "#4dbcd1" },
+  ];
 
+  const handleComppick = () => {
+    let randomIdx = Math.floor(Math.random() * opts.length);
+
+    return opts[randomIdx];
+  };
   const handleGameplay = (userpick) => {
-    setGameData({ ...gameData, user: userpick });
+    let compPick = handleComppick();
+    setGameData({
+      ...gameData,
+      user: userpick,
+      computer: compPick,
+    });
+  };
+  const handlePlayAgain = () => {
+    setGameData({ user: null, computer: null, result: null });
   };
   return (
     <div className="RPSPage">
@@ -69,11 +87,14 @@ const index = () => {
           </div>
           <div className="middle">
             <p>YOU LOSE</p>
-            <button>PLAY AGAIN</button>
+            <button onClick={handlePlayAgain}>PLAY AGAIN</button>
           </div>
           <div className="right">
             <p>THE HOUSE PICKED</p>
-            <Piece Logo={ScissorsLogo} color="#eda621" />
+            <Piece
+              Logo={gameData.computer.logo}
+              color={gameData.computer.color}
+            />
           </div>
         </div>
       )}
