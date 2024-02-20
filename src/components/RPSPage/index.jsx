@@ -7,11 +7,14 @@ import RulesModal from "../../utils/rules";
 const index = () => {
   const [showModal, setShowModal] = useState(false);
   const [gameData, setGameData] = useState({
-    user: {},
+    user: null,
     computer: null,
     result: null,
   });
 
+  const handleGameplay = (userpick) => {
+    setGameData({ ...gameData, user: userpick });
+  };
   return (
     <div className="RPSPage">
       <div className="banner">
@@ -27,16 +30,46 @@ const index = () => {
       </div>
       {!gameData.user && (
         <div className="game_board">
-          <Piece Logo={RockLogo} color="#eda621" />
-          <Piece Logo={ScissorsLogo} color="#4dbcd1" />
-          <Piece Logo={PaperLogo} color="#8f5ce7" />
+          <Piece
+            Logo={RockLogo}
+            color="#eda621"
+            click={() =>
+              handleGameplay({ pick: "Rock", logo: RockLogo, color: "#eda621" })
+            }
+          />
+          <Piece
+            Logo={ScissorsLogo}
+            color="#4dbcd1"
+            click={() =>
+              handleGameplay({
+                pick: "Scissors",
+                logo: ScissorsLogo,
+                color: "#4dbcd1",
+              })
+            }
+          />
+          <Piece
+            Logo={PaperLogo}
+            color="#8f5ce7"
+            click={() =>
+              handleGameplay({
+                pick: "Paper",
+                logo: PaperLogo,
+                color: "#8f5ce7",
+              })
+            }
+          />
         </div>
       )}
       {gameData.user && (
         <div className="result_board">
           <div className="left">
             <p>YOU PICKED</p>
-            <Piece Logo={RockLogo} color="#eda621" />
+            <Piece Logo={gameData.user.logo} color={gameData.user.color} />
+          </div>
+          <div className="middle">
+            <p>YOU LOSE</p>
+            <button>PLAY AGAIN</button>
           </div>
           <div className="right">
             <p>THE HOUSE PICKED</p>
