@@ -9,7 +9,7 @@ const index = () => {
   const [gameData, setGameData] = useState({
     user: null,
     computer: null,
-    result: null,
+    result: { outcome: "", score: 0 },
   });
   const opts = [
     { pick: "Rock", logo: RockLogo, color: "#eda621" },
@@ -17,21 +17,46 @@ const index = () => {
     { pick: "Scissors", logo: ScissorsLogo, color: "#4dbcd1" },
   ];
 
+  const evaluator = {
+    RockPaper: "Paper",
+    RockScissors: "Rock",
+    ScissorsPaper: "Scissors",
+    ScissorsRock: "Rock",
+    PaperRock: "Paper",
+    PaperScissors: "Scissors",
+  };
   const handleComppick = () => {
     let randomIdx = Math.floor(Math.random() * opts.length);
-
     return opts[randomIdx];
   };
   const handleGameplay = (userpick) => {
     let compPick = handleComppick();
-    setGameData({
-      ...gameData,
+    let newGameData = {
       user: userpick,
       computer: compPick,
-    });
+    };
+    console.log(evaluator[userpick.pick + compPick.pick]);
+    if (userpick.pick === compPick.pick) {
+      let tempResult = { outcome: "DRAW", score: gameData.result.score };
+      newGameData.result = tempResult;
+    } else if (evaluator[userpick.pick + compPick.pick] === userpick.pick) {
+      let tempResult = { outcome: "YOU WIN", score: gameData.result.score + 1 };
+      newGameData.result = tempResult;
+    } else if (evaluator[userpick.pick + compPick.pick] === compPick.pick) {
+      let tempResult = {
+        outcome: "YOU LOSE",
+        score: gameData.result.score - 1,
+      };
+      newGameData.result = tempResult;
+    }
+    setGameData(newGameData);
   };
   const handlePlayAgain = () => {
-    setGameData({ user: null, computer: null, result: null });
+    setGameData({
+      user: null,
+      computer: null,
+      result: gameData.result,
+    });
   };
   return (
     <div className="RPSPage">
@@ -43,7 +68,7 @@ const index = () => {
         </h1>
         <div>
           <p>Score</p>
-          <p>10</p>
+          <p>{gameData.result.score}</p>
         </div>
       </div>
       {!gameData.user && (
@@ -86,7 +111,7 @@ const index = () => {
             <Piece Logo={gameData.user.logo} color={gameData.user.color} />
           </div>
           <div className="middle">
-            <p>YOU LOSE</p>
+            <p>{gameData.result.outcome}</p>
             <button onClick={handlePlayAgain}>PLAY AGAIN</button>
           </div>
           <div className="right">
