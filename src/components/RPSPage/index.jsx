@@ -108,7 +108,11 @@ const index = () => {
         <div className="result_board">
           <div className="left">
             <p>YOU PICKED</p>
-            <Piece Logo={gameData.user.logo} color={gameData.user.color} />
+            <Piece
+              Logo={gameData.user.logo}
+              color={gameData.user.color}
+              winner={gameData.result.outcome === "YOU WIN"}
+            />
           </div>
           <div className="middle">
             <p>{gameData.result.outcome}</p>
@@ -119,6 +123,7 @@ const index = () => {
             <Piece
               Logo={gameData.computer.logo}
               color={gameData.computer.color}
+              winner={gameData.result.outcome === "YOU LOSE"}
             />
           </div>
         </div>
