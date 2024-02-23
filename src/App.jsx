@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Home from "./components/Home";
 import RPSPage from "./components/RPSPage";
+import RPSLSPage from "./components/RPSLSPage";
 function App() {
   const [gameMode, setGameMode] = useState(null);
   return (
@@ -9,7 +10,7 @@ function App() {
       {gameMode === "RPS" ? (
         <RPSPage />
       ) : gameMode === "RPSLS" ? (
-        <div>RPSLS</div>
+        <RPSLSPage />
       ) : (
         <Home handleSetGameMode={(mode) => setGameMode(mode)} />
       )}
