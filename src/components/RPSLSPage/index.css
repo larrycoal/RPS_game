@@ -1,4 +1,4 @@
-.RPSPage {
+.RPSLSPage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,11 +6,11 @@
   height: 100%;
   margin: 0 auto;
 }
-.RPSPage .banner {
+.RPSLSPage .banner {
   display: flex;
   justify-content: space-between;
   color: #fff;
-  font-size: 1rem;
+  font-size: 10px;
   font-weight: bold;
   border: 3px solid hsl(217, 16%, 45%);
   border-radius: 20px;
@@ -18,13 +18,13 @@
   margin: 3rem 0;
   width: 800px;
 }
-.RPSPage .banner h1 {
+.RPSLSPage .banner h1 {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.RPSPage .banner div {
+.RPSLSPage .banner div {
   background-color: #fff;
   color: rgb(52, 50, 50);
   width: 180px;
@@ -33,38 +33,49 @@
   padding: 1rem;
   border-radius: 10px;
 }
-.RPSPage .banner div p:nth-child(2) {
+.RPSLSPage .banner div p:nth-child(2) {
   font-size: 3rem;
   margin: 5px 0;
   color: #636468;
 }
-.RPSPage .banner div p:nth-child(1) {
+.RPSLSPage .banner div p:nth-child(1) {
   font-size: 1.8rem;
   margin: 5px 0;
   color: #37499d;
 }
-.game_board {
+.RPSLSPage .game_board {
   width: 500px;
   height: 500px;
   margin: 0 auto;
   position: relative;
-  background-image: url("../../assets/bg-triangle.svg");
+  background-image: url("../../assets/bg-pentagon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.game_board div:nth-child(1) {
+
+.RPSLSPage .game_board div:nth-child(1) {
   position: absolute;
   top: 20px;
+  right: 37%;
 }
-.game_board div:nth-child(2) {
+.RPSLSPage .game_board div:nth-child(2) {
   position: absolute;
-  top: 20px;
+  top: 130px;
   right: 0;
 }
-.game_board div:nth-child(3) {
+.RPSLSPage .game_board div:nth-child(3) {
   position: absolute;
   bottom: 20px;
-  right: 32%;
+  right: 12%;
+}
+.RPSLSPage .game_board div:nth-child(4) {
+  position: absolute;
+  bottom: 20px;
+  left: 12%;
+}
+.RPSLSPage .game_board div:nth-child(5) {
+  position: absolute;
+  top: 140px;
 }
 .rules_btn {
   position: absolute;
@@ -123,4 +134,35 @@
   border-radius: 5px;
   font-size: 1.1rem;
   cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .RPSLSPage .game_board {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .RPSLSPage .game_board div:nth-child(1) {
+    position: absolute;
+    top: 50px;
+    right: 30%;
+  }
+  .RPSLSPage .game_board div:nth-child(2) {
+    position: absolute;
+    top: 200px;
+    right: 10px;
+  }
+  .RPSLSPage .game_board div:nth-child(3) {
+    position: absolute;
+    bottom: 100px;
+    right: 5%;
+  }
+  .RPSLSPage .game_board div:nth-child(4) {
+    position: absolute;
+    bottom: 100px;
+    left: 5%;
+  }
+  .RPSLSPage .game_board div:nth-child(5) {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+  }
 }

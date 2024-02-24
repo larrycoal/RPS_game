@@ -1,6 +1,6 @@
 import React from "react";
-import { RulesImage } from "../assets/index";
-const RulesModal = ({ showModal, closeModal }) => {
+import { RulesImage,RulesImageTWO } from "../assets/index";
+const RulesModal = ({ showModal, closeModal, game ="RPS" }) => {
   return (
     <div
       className="rules_wrapper"
@@ -10,7 +10,7 @@ const RulesModal = ({ showModal, closeModal }) => {
         <span>RULES</span>
         <span onClick={closeModal}>X</span>
       </div>
-      <RulesImage />
+      {game === "RPS" ? <RulesImage /> : <RulesImageTWO />}
     </div>
   );
 };

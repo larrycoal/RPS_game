@@ -44,11 +44,13 @@
 .title span:nth-child(5) {
   color: #eda621;
 }
-.rps_launch .icons,.rpsls_launch .icons {
+.rps_launch .icons,
+.rpsls_launch .icons {
   display: flex;
   justify-content: space-evenly;
 }
-.rps_launch button, .rpsls_launch button {
+.rps_launch button,
+.rpsls_launch button {
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -83,4 +85,24 @@
   justify-content: center;
   gap: 10px;
   margin: 1rem 0;
+}
+@media screen and (max-width: 800px) {
+  .home_wrapper {
+    padding: 1rem;
+  }
+  .banner {
+    font-size: 1.3rem;
+    padding: 1.2rem 5px;
+    border-radius: 5px;
+    margin: 1rem 0;
+  }
+  .rps_launch .title,.rpsls_launch .title{
+    font-size: 1.2rem;
+  }
+  svg{
+    scale: .8;
+  }
+  .rps_launch,.rpsls_launch{
+    gap: 5px;
+  }
 }
