@@ -23,6 +23,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
 }
 .RPSLSPage .banner div {
   background-color: #fff;
@@ -76,19 +77,6 @@
 .RPSLSPage .game_board div:nth-child(5) {
   position: absolute;
   top: 140px;
-}
-.rules_btn {
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  width: 120px;
-  padding: 12px;
-  background-color: transparent;
-  border: 2px solid hsl(217, 16%, 45%);
-  color: white;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
 }
 .result_board {
   display: flex;
@@ -164,5 +152,18 @@
     position: absolute;
     top: 200px;
     left: 10px;
+  }
+  .banner div {
+    width: 120px !important;
+    height: 80px !important;
+  }
+  .banner h1 {
+    font-size: 14px;
+  }
+  .RPSPage .banner div p:nth-child(1){
+    font-size: 1rem;
+  }
+  .RPSPage .banner div p:nth-child(2){
+    font-size: 1.3rem;
   }
 }
