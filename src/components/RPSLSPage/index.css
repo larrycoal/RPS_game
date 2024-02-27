@@ -130,27 +130,27 @@
   }
   .RPSLSPage .game_board div:nth-child(1) {
     position: absolute;
-    top: 50px;
-    right: 30%;
+    top: 110px;
+    right: 35%;
   }
   .RPSLSPage .game_board div:nth-child(2) {
     position: absolute;
-    top: 200px;
+    top: 230px;
     right: 10px;
   }
   .RPSLSPage .game_board div:nth-child(3) {
     position: absolute;
-    bottom: 100px;
+    bottom: 140px;
     right: 5%;
   }
   .RPSLSPage .game_board div:nth-child(4) {
     position: absolute;
-    bottom: 100px;
+    bottom: 140px;
     left: 5%;
   }
   .RPSLSPage .game_board div:nth-child(5) {
     position: absolute;
-    top: 200px;
+    top: 230px;
     left: 10px;
   }
   .banner div {
@@ -158,12 +158,21 @@
     height: 80px !important;
   }
   .banner h1 {
-    font-size: 14px;
+    font-size: 12px;
   }
   .RPSPage .banner div p:nth-child(1){
     font-size: 1rem;
   }
   .RPSPage .banner div p:nth-child(2){
     font-size: 1.3rem;
+  }
+  .RPSLSPage .banner div{
+    height: 110px !important;
+  }
+  .RPSLSPage .banner div p:nth-child(1){
+    font-size: 1.2rem;
+  }
+  .RPSLSPage .banner div p:nth-child(2){
+    font-size: 1.8rem;
   }
 }
