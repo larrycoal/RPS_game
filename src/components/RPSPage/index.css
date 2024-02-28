@@ -189,6 +189,7 @@
     order: 2 !important;
   }
   .rules_btn {
+    position: fixed;
     width: 80px;
     padding: 5px;
     font-size: 12px;
