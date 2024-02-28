@@ -150,13 +150,13 @@
     border-width: 15px !important;
   }
   .game_board div:nth-child(1) {
-    top: 140px;
+    top: 110px;
   }
   .game_board div:nth-child(2) {
-    top: 140px;
+    top: 110px;
   }
   .game_board div:nth-child(3) {
-    bottom: 160px;
+    bottom: 140px;
     right: 32%;
   }
   .pieceWrapper {
