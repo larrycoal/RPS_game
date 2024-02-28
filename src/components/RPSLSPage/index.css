@@ -124,34 +124,35 @@
   cursor: pointer;
 }
 @media screen and (max-width: 800px) {
+  .RPSLSPage {
+    padding: 5px;
+  }
   .RPSLSPage .game_board {
     width: 100% !important;
     height: 100% !important;
   }
   .RPSLSPage .game_board div:nth-child(1) {
     position: absolute;
-    top: 110px;
+    top: 90px;
     right: 35%;
   }
   .RPSLSPage .game_board div:nth-child(2) {
     position: absolute;
-    top: 230px;
-    right: 10px;
+    top: 150px;
   }
   .RPSLSPage .game_board div:nth-child(3) {
     position: absolute;
-    bottom: 140px;
+    bottom: 50px;
     right: 5%;
   }
   .RPSLSPage .game_board div:nth-child(4) {
     position: absolute;
-    bottom: 140px;
+    bottom: 50px;
     left: 5%;
   }
   .RPSLSPage .game_board div:nth-child(5) {
     position: absolute;
-    top: 230px;
-    left: 10px;
+    top: 150px;
   }
   .banner div {
     width: 120px !important;
@@ -160,19 +161,19 @@
   .banner h1 {
     font-size: 12px;
   }
-  .RPSPage .banner div p:nth-child(1){
+  .RPSPage .banner div p:nth-child(1) {
     font-size: 1rem;
   }
-  .RPSPage .banner div p:nth-child(2){
+  .RPSPage .banner div p:nth-child(2) {
     font-size: 1.3rem;
   }
-  .RPSLSPage .banner div{
+  .RPSLSPage .banner div {
     height: 110px !important;
   }
-  .RPSLSPage .banner div p:nth-child(1){
+  .RPSLSPage .banner div p:nth-child(1) {
     font-size: 1.2rem;
   }
-  .RPSLSPage .banner div p:nth-child(2){
+  .RPSLSPage .banner div p:nth-child(2) {
     font-size: 1.8rem;
   }
 }
