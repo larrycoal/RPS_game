@@ -123,11 +123,15 @@
   border-radius: 5px;
   font-size: 1.1rem;
   cursor: pointer;
+  color: black;
 }
 @media screen and (max-width: 800px) {
   .RPSPage,
   .RPSLSPage {
     width: 100% !important;
+    padding: 5px !important;
+    height: 100vh !important;
+
   }
   .RPSPage .banner,
   .RPSLSPage .banner {
