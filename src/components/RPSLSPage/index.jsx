@@ -4,7 +4,7 @@ import { RockLogo, ScissorsLogo, PaperLogo,SpockLogo,LizardLogo } from "../../as
 import "./index.css";
 import RulesModal from "../../utils/rules";
 
-const index = () => {
+const index = ({goHome}) => {
   const [showModal, setShowModal] = useState(false);
   const [gameData, setGameData] = useState({
     user: null,
@@ -177,6 +177,9 @@ const index = () => {
           </div>
         </div>
       )}
+      <button className="home_btn" onClick={goHome}>
+        HOME
+      </button>
       <button className="rules_btn" onClick={() => setShowModal(!showModal)}>
         RULES
       </button>

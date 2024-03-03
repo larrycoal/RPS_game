@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       {gameMode === "RPS" ? (
-        <RPSPage />
+        <RPSPage goHome={() => setGameMode(null)} />
       ) : gameMode === "RPSLS" ? (
-        <RPSLSPage />
+        <RPSLSPage goHome={() => setGameMode(null)} />
       ) : (
         <Home handleSetGameMode={(mode) => setGameMode(mode)} />
       )}
